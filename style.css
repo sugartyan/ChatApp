@@ -28,7 +28,7 @@
 }
 
 #userName{
-    float:left; /*左寄せ*/
+    float: left; /*左寄せ*/
     line-height: 2em;
     padding: 7px;
 }
