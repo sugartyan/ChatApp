@@ -1,0 +1,108 @@
+#youContainer{  /*高さ,幅*/
+    height:400px;
+    width:60%;
+}
+
+#messageContainer{ /*チャットの外側*/
+    height: 100%;
+    width: 100%;
+    background-color:azure;
+}
+
+#chatHeader{ /*ユーザー名とオンライン状態*/
+    padding: 6px;
+    font-size: 18px;
+    height:100%;
+    background: #ddd;
+    border: 1px solid #ccc;
+}
+
+#chatStatus{
+    float:left; /*左寄せ*/
+}
+
+#statusIcon{ /*ステータスマーク*/
+    float:left; /*左寄せ*/
+    line-height: normal; /*高さ調整*/
+}
+
+#userName{
+    float:left; /*左寄せ*/
+    line-height: normal;
+    padding: 7px;
+}
+
+#timeMessages{ /*タイムライン部分*/
+    overflow: auto; /* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
+    height:100%; /*テキストエリアが下に張り付く様にする*/
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color:azure;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
+}
+
+/*メッセージ1のスタイル(左側)*/
+.messageLeft{
+    margin: 0px;
+    padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
+    font-size: 16px;
+    word-wrap: break-word;/* 吹き出し内で自動で改行 */
+    white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+    float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+    line-height: 1.3em;
+}
+
+/*メッセージ2のスタイル(右側)*/
+.messageRight{
+    margin: 0px;
+    padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
+    font-size: 16px;
+    word-wrap: break-word;/* 吹き出し内で自動で改行 */
+    white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+    float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+    line-height: 1.3em;
+}
+
+.clear{
+    clear:both; 
+    /* 左メッセージと右メッセージの回り込み(float)の効果の干渉を防ぐために必要（これが無いと、自分より下のメッセージにfloatが影響する） */
+}
+
+#sendButton {
+    background-color:antiquewhite;/*タイムラインの色と同じにする*/
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 48px;
+    padding: 4px;
+}
+    #sendMessage{
+        width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+        line-height: 16px;
+        height: 48px;
+        padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+        border: 1px solid antiquewhite;
+        border-radius: 4px;/*角丸*/
+        text-align: left;/*文字を左寄せ*/
+        box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+        box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+
+    }
+    #sendBtn {
+        width: 72px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 3em;
+        float: right;/*bms_sendに対して右寄せ*/
+        color: #fff;
+        font-weight: bold;
+        background: #bcbcbc;
+        text-align: center;/*文字をボタン中央に表示*/
+        border: 1px solid #bbb;
+        border-radius: 4px;/*角丸*/
+        box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+    }
+    #sendBtn:hover {
+        background: #13178E; /*マウスポインタを当てた時にアクティブな色になる*/
+        cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
+    }
