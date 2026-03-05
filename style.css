@@ -1,6 +1,6 @@
-#youContainer{  /*高さ,幅*/
-    height:400px;
-    width:60%;
+#yourContainer{  /*高さ,幅*/
+    height:600px;
+    width:50%;
 }
 
 #messageContainer{ /*チャットの外側*/
@@ -12,7 +12,7 @@
 #chatHeader{ /*ユーザー名とオンライン状態*/
     padding: 6px;
     font-size: 18px;
-    height:100%;
+    height:34px;
     background: #ddd;
     border: 1px solid #ccc;
 }
@@ -23,12 +23,12 @@
 
 #statusIcon{ /*ステータスマーク*/
     float:left; /*左寄せ*/
-    line-height: normal; /*高さ調整*/
+    line-height: 2em; /*高さ調整*/
 }
 
 #userName{
     float:left; /*左寄せ*/
-    line-height: normal;
+    line-height: 2em;
     padding: 7px;
 }
 
