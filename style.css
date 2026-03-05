@@ -1,0 +1,33 @@
+# youContainer{  /*高さ,幅*/
+    height:400;
+    width:60%;
+}
+
+# messageContainer{ /*チャットの外側*/
+    height: auto;
+    width: auto;
+    background-color:azure;
+}
+
+# chatHeader{ /*ユーザー名とオンライン状態*/
+    padding: auto;
+    font-size: 18px;
+    height:auto;
+    background: #ddd;
+    border: 1px solid #ccc;
+}
+
+#chatStatus{
+    float:left; /*左寄せ*/
+}
+
+#statusIcon{ /*ステータスマーク*/
+    float:left; /*左寄せ*/
+    line-height: normal;
+}
+
+#userName{
+    float:left; /*左寄せ*/
+    line-height: normal;
+    padding: auto;
+}
