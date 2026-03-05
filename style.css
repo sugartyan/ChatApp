@@ -1,10 +1,11 @@
-#youContainer{  /*高さ,幅*/
-    height:400px;
-    width:60%;
-}
+/*高さ,幅*/
+/*#yourContainer{ 
+    height:600px;
+    width:50%;
+}*/
 
 #messageContainer{ /*チャットの外側*/
-    height: 100%;
+    height: 600px;
     width: 100%;
     background-color:azure;
 }
@@ -12,7 +13,7 @@
 #chatHeader{ /*ユーザー名とオンライン状態*/
     padding: 6px;
     font-size: 18px;
-    height:100%;
+    height:34px;
     background: #ddd;
     border: 1px solid #ccc;
 }
@@ -23,42 +24,41 @@
 
 #statusIcon{ /*ステータスマーク*/
     float:left; /*左寄せ*/
-    line-height: normal; /*高さ調整*/
+    line-height: 2em; /*高さ調整*/
 }
 
 #userName{
     float:left; /*左寄せ*/
-    line-height: normal;
+    line-height: 2em;
     padding: 7px;
 }
 
 #timeMessages{ /*タイムライン部分*/
     overflow: auto; /* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
-    height:100%; /*テキストエリアが下に張り付く様にする*/
+    height:calc(100%-90px); /*テキストエリアが下に張り付く様にする*/
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
     background-color:azure;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
 }
 
-/*メッセージ1のスタイル(左側)*/
-.messageLeft{
-    margin: 0px;
+/*メッセージ全体のスタイル*/
+.timeMessage{
+    margin: 10px 20px;
     padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
     font-size: 16px;
     word-wrap: break-word;/* 吹き出し内で自動で改行 */
     white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+}
+
+/*メッセージ1のスタイル(左側)*/
+.messageLeft{
     float: left;/*吹き出しをbms_messagesに対して左寄せ*/
     line-height: 1.3em;
 }
 
 /*メッセージ2のスタイル(右側)*/
 .messageRight{
-    margin: 0px;
-    padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
-    font-size: 16px;
-    word-wrap: break-word;/* 吹き出し内で自動で改行 */
-    white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
     float: right;/*吹き出しをbms_messagesに対して右寄せ*/
     line-height: 1.3em;
 }
