@@ -1,1 +1,65 @@
-Hellow World
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!--meta viewport はスマホでも画面サイスに合わせて表示する設定-->
+    <title>チャットアプリケーション</title>
+</head>     
+<body>
+    <!-- ユーザー情報 -->
+    <h3 id="userFirst" user_id="1">あなたはユーザー１です。</h3>
+    <h3 id="chatPartner" thread_id="1">相手</h3>
+    <div id="users">
+        <button class="userSecond" user_id="2">ユーザー2</button>
+    </div>
+    <br> 
+    <div id="youContainer">
+        <!-- チャットの外側 -->
+        <div id="messagesContainer">
+            <!-- ヘッダー部 -->
+            <div id="chatHeader">
+                <!-- ステータス -->
+                <div id="chatStatus">
+                    <!--ステータスアイコン-->
+                    <div id="statusIcon">状態 ◯</div>
+                    <!--ユーザー名-->
+                    <div id="userName">ユーザー</div>
+                </div>
+            </div>
+  
+            <!-- タイムライン部 -->
+            <div id="TimeMessages">
+  
+                <!-- メッセージ１（左側）-->
+                <div class="MessageLeft">
+                    <div class="messageBox">
+                        <div class="messageContent">
+                            <div class="messageText">よろしくお願いします。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- 回り込みを解除（スタイルはcssで充てる） -->
+
+                <!--メッセージ２（右側）-->
+                <div class="messageRight">
+                    <div class="messageBox">
+                        <div class="messageContent">
+                            <div class="bms_message_text">こちらこそ。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- 回り込みを解除（スタイルはcssで充てる） -->
+            </div>
+  
+            <!-- テキストボックス、送信ボタン -->
+            <div id="sendButton">
+                <textarea id="sendMessage"></textarea>
+                <button class="sendBtn">送信</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
