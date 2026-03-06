@@ -4,7 +4,7 @@
     width:50%;
 }*/
 
-#messageContainer{ /*チャットの外側*/
+#messagesContainer{ /*チャットの外側*/
     height: 600px;
     width: 100%;
     background-color:azure;
@@ -19,27 +19,33 @@
 }
 
 #chatStatus{
-    float:left; /*左寄せ*/
+    float: left; /*左寄せ*/
 }
 
 #statusIcon{ /*ステータスマーク*/
-    float:left; /*左寄せ*/
+    float: left; /*左寄せ*/
     line-height: 2em; /*高さ調整*/
 }
 
 #userName{
-    float:left; /*左寄せ*/
+    float: left; /*左寄せ*/
     line-height: 2em;
-    padding: 7px;
+    padding-left: 7px;
 }
 
 #timeMessages{ /*タイムライン部分*/
     overflow: auto; /* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
-    height:calc(100%-90px); /*テキストエリアが下に張り付く様にする*/
+    height:calc(100% - 90px); /*テキストエリアが下に張り付く様にする*/
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
     background-color:azure;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
+}
+
+#timeMessages::after{
+    content:"";
+    display:block;
+    clear:both;
 }
 
 /*メッセージ全体のスタイル*/
@@ -69,7 +75,7 @@
 }
 
 #sendButton {
-    background-color:antiquewhite;/*タイムラインの色と同じにする*/
+    background-color:azure;/*タイムラインの色と同じにする*/
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -81,7 +87,7 @@
         line-height: 16px;
         height: 48px;
         padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
-        border: 1px solid antiquewhite;
+        border: 1px solid azure;
         border-radius: 4px;/*角丸*/
         text-align: left;/*文字を左寄せ*/
         box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
