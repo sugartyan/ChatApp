@@ -28,7 +28,7 @@ const userSwitchBtn = document.getElementById('userSwitchBtn');
 sendButton.addEventListener('click', function() {
     const sendMessage = document.getElementById('sendMessage');
     const msgText = sendMessage.value.trim();
-    const myId = myIdElement.getAttribute('user_id')
+    const myId = myIdElement.getAttribute('user_id');
     
     if(msgText !== "") {
         //dbにpush
@@ -49,7 +49,7 @@ onChildAdded(dbRef, (data) => {
     const myId = myIdElement.getAttribute('user_id');
     
     // 自分のメッセージ(1)か相手のかでクラスを切り替え
-    const sideClass = (msg.userId === myId) ? "Right" : "Left";
+    const sideClass = (msg.userId === "1") ? "Right" : "Left";
 
     // 友達のHTML構造に合わせてメッセージを追加
     const msgHtml = `
@@ -68,3 +68,18 @@ onChildAdded(dbRef, (data) => {
     timeMessages.scrollTo(0, timeMessages.scrollHeight);
 });
 
+//ユーザの切り替え
+userSwitchBtn.addEventListener('click', function() {
+    
+    if(myIdElement.getAttribute('user_id') === "1") {
+        myIdElement.innerText = null;
+        myIdElement = document.getElementById('chatPartner');
+        console.log('user2だよ')
+    } else {
+        myIdElement.innerText = null;
+        myIdElement = document.getElementById('userFirst');
+        console.log('user1だよ')
+    }
+    myIdElement.innerText = `あなたはユーザー${myIdElement.getAttribute('user_id')}です`;
+    //myIdElement = document.getElementById((myIdElement.getAttribute('user_id') === 1) ? 'chatPartner' : 'userFirst');
+});
