@@ -1,12 +1,16 @@
 /*高さ,幅*/
-/*#yourContainer{ 
+/*yourContainer{ 
     height:600px;
     width:50%;
+    margin:auto;
 }*/
 
 #messagesContainer{ /*チャットの外側*/
     height: 600px;
     width: 100%;
+    /*height:100%;
+    display: flex;
+    flex-direction: column;*/
     background-color:azure;
 }
 
@@ -52,7 +56,7 @@
 .timeMessage{
     margin: 10px 20px;
     padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
-    font-size: 16px;
+    font-size: 18px;
     word-wrap: break-word;/* 吹き出し内で自動で改行 */
     white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
 }
@@ -60,7 +64,7 @@
 /*追加機能*/
 .messageBox{
     margin-top: 20px; /*吹き出しがひっつかない様の隙間*/
-    max-width: 100%; /*文字が長くなった時に吹き出しがタイムラインからはみださない様*/
+    max-width: 100%; /*文字が長くなった時に吹き出しがタイムラインからはみださない様,メッセージ最大幅*/
     font-size: 18px;
 }
 
@@ -80,7 +84,7 @@
     background-color:#fff;
     border: 2px solid #13178E;
     border-radius: 30px 30px 30px 0px; /*吹き出し*/
-    margin-right: 50px; /*吹き出し右側に隙間を入れる*/
+    margin-right: 70px; /*吹き出し右側に隙間を入れる*/
 }
 
 /*メッセージ2のスタイル(右側)*/
@@ -95,7 +99,7 @@
     background-color: dodgerblue;
     border: 2px solid #13178E;
     border-radius: 30px 30px 0px 30px; /*吹き出し*/
-    margin-left: 50px; /*吹き出し右側に隙間を入れる*/
+    margin-left: 70px; /*吹き出し右側に隙間を入れる*/
 }
 
 .clear{
@@ -119,7 +123,7 @@
         border: 1px solid azure;
         border-radius: 4px;/*角丸*/
         text-align: left;/*文字を左寄せ*/
-        box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+        box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*影を入れてテキストエリアらしくした*/
         box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
 
     }
