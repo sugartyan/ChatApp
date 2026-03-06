@@ -18,7 +18,7 @@
     padding: 6px;
     font-size: 18px;
     height:34px;
-    background: #ddd;
+    background-color:deepskyblue;
     border: 1px solid #ccc;
 }
 
@@ -72,6 +72,11 @@
     padding:20px;
 }
 
+.messageText{
+    white-space: pre-wrap;
+    max-width: 300px;
+}
+
 /*メッセージ1のスタイル(左側)*/
 .messageLeft{
     float: left;/*吹き出しをbms_messagesに対して左寄せ*/
@@ -108,7 +113,7 @@
 }
 
 #sendButton {
-    background-color:azure;/*タイムラインの色と同じにする*/
+    background-color:violet;/*タイムラインの色と同じにする*/
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -127,15 +132,15 @@
         box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
 
     }
-    #sendBtn {
+    .sendBtn {
         width: 72px;
         height: 48px;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 3em;
         float: right;/*bms_sendに対して右寄せ*/
-        color: #fff;
+        color:black;
         font-weight: bold;
-        background: #bcbcbc;
+        background:#ddd;
         text-align: center;/*文字をボタン中央に表示*/
         border: 1px solid #bbb;
         border-radius: 4px;/*角丸*/
