@@ -13,7 +13,7 @@
     <h3 id="userFirst" user_id="1">あなたはユーザー１です。</h3>
     <h3 id="chatPartner" thread_id="1">相手</h3>
     <div id="users">
-        <button class="userSecond" user_id="2">ユーザー2</button>
+        <button id="userSwitchBtn" class="userSecond" user_id="2">ユーザー2</button>
     </div>
     <br> 
     <div id="yourContainer"></div>
@@ -57,12 +57,12 @@
             </div>
   
             <!-- テキストボックス、送信ボタン -->
-            <div id="sendButton">
+            <div >
                 <textarea id="sendMessage"></textarea>
-                <button class="sendBtn">送信</button>
+                <button id="sendButton" class="sendBtn">送信</button>
             </div>
         </div>
     </div>
-    <script type="module" src="script.js"></script> <!-- java script用　-->
+    <script type="module" src="index.js"></script> <!-- java script用　-->
 </body>
 </html>
