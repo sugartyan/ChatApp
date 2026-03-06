@@ -28,7 +28,7 @@ const userSwitchBtn = document.getElementById('userSwitchBtn');
 sendButton.addEventListener('click', function() {
     const sendMessage = document.getElementById('sendMessage');
     const msgText = sendMessage.value.trim();
-    const myId = myIdElement.getAttribute('user_id')
+    const myId = myIdElement.getAttribute('user_id');
     
     if(msgText !== "") {
         //dbにpush
@@ -68,3 +68,15 @@ onChildAdded(dbRef, (data) => {
     timeMessages.scrollTo(0, timeMessages.scrollHeight);
 });
 
+//ユーザの切り替え
+userSwitchBtn.addEventListener('click', function() {
+    
+    if(myIdElement.getAttribute('user_id') === "1") {
+        myIdElement = document.getElementById('chatPartner');
+        console.log('user1');
+    } else {
+        myIdElement = document.getElementById('userFirst');
+        console.log('user2');
+    }
+    //myIdElement = document.getElementById((myIdElement.getAttribute('user_id') === 1) ? 'chatPartner' : 'userFirst');
+});
