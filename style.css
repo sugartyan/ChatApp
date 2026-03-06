@@ -57,16 +57,45 @@
     white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
 }
 
+/*追加機能*/
+.messageBox{
+    margin-top: 20px; /*吹き出しがひっつかない様の隙間*/
+    max-width: 100%; /*文字が長くなった時に吹き出しがタイムラインからはみださない様*/
+    font-size: 18px;
+}
+
+.messageContent{
+    padding:20px;
+}
+
 /*メッセージ1のスタイル(左側)*/
 .messageLeft{
     float: left;/*吹き出しをbms_messagesに対して左寄せ*/
     line-height: 1.3em;
 }
 
+/*追加機能*/
+.messageLeft .messageBox{
+    color:black;
+    background-color:#fff;
+    border: 2px solid #13178E;
+    border-radius: 30px 30px 30px 0px; /*吹き出し*/
+    margin-right: 50px; /*吹き出し右側に隙間を入れる*/
+}
+
 /*メッセージ2のスタイル(右側)*/
 .messageRight{
     float: right;/*吹き出しをbms_messagesに対して右寄せ*/
     line-height: 1.3em;
+}
+
+/*追加機能*/
+.messageRight .messageBox{
+    color:#fff;
+    background-color: dodgerblue;
+    border: 2px solid #13178E;
+    border-radius: 30px 30px 0px 30px; /*吹き出し*/
+    margin-left: 50px; /*吹き出し右側に隙間を入れる*/
 }
 
 .clear{
