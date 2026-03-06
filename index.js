@@ -19,12 +19,14 @@ const sendButton = document.getElementById('sendButton');
 //タイムライン
 const timeMessages = document.getElementById('timeMessages');
 //送信者
-const myIdElement = document.getElementById('userFirst');
+let myIdElement = document.getElementById('userFirst');
+//ユーザ切り替えボタン
+const userSwitchBtn = document.getElementById('userSwitchBtn');
 /////////////////////////////////////////////////////////////
 
 //送信処理
 sendButton.addEventListener('click', function() {
-    const sendMessage = document.getElementsByClassName("sendMessage")[0];
+    const sendMessage = document.getElementById('sendMessage');
     const msgText = sendMessage.value.trim();
     const myId = myIdElement.getAttribute('user_id')
     
@@ -51,10 +53,10 @@ onChildAdded(dbRef, (data) => {
 
     // 友達のHTML構造に合わせてメッセージを追加
     const msgHtml = `
-        <div class="message${sideClass}">
+        <div class="timeMessage message${sideClass}">
             <div class="messageBox">
                 <div class="messageContent">
-                    <div class="messageText">${escapeHtml(msg.text)}</div>
+                    <div class="messageText">${msg.text}</div>
                 </div>
             </div>
         </div>
@@ -65,3 +67,4 @@ onChildAdded(dbRef, (data) => {
     // 最新のメッセージまでスクロール
     timeMessages.scrollTo(0, timeMessages.scrollHeight);
 });
+
