@@ -49,7 +49,7 @@ onChildAdded(dbRef, (data) => {
     const myId = myIdElement.getAttribute('user_id');
     
     // 自分のメッセージ(1)か相手のかでクラスを切り替え
-    const sideClass = (msg.userId === myId) ? "Right" : "Left";
+    const sideClass = (msg.userId === "1") ? "Right" : "Left";
 
     // 友達のHTML構造に合わせてメッセージを追加
     const msgHtml = `
@@ -72,11 +72,14 @@ onChildAdded(dbRef, (data) => {
 userSwitchBtn.addEventListener('click', function() {
     
     if(myIdElement.getAttribute('user_id') === "1") {
+        myIdElement.innerText = null;
         myIdElement = document.getElementById('chatPartner');
-        console.log('user1');
+        console.log('user2だよ')
     } else {
+        myIdElement.innerText = null;
         myIdElement = document.getElementById('userFirst');
-        console.log('user2');
+        console.log('user1だよ')
     }
+    myIdElement.innerText = `あなたはユーザー${myIdElement.getAttribute('user_id')}です`;
     //myIdElement = document.getElementById((myIdElement.getAttribute('user_id') === 1) ? 'chatPartner' : 'userFirst');
 });
